@@ -52,6 +52,7 @@ module.exports = function(app,  mongoose, cors){
       if (err){
         res.send(err);
       }else{
+        console.log("NOMBRE", req.body.nombre); 
         pelicula.nombre = req.body.nombre;
         pelicula.descripcion = req.body.descripcion;
         pelicula.year = req.body.year;
