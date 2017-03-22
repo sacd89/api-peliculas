@@ -34,7 +34,7 @@ module.exports = function(app,  mongoose, cors){
 
   /* Metodo para obtener peliculas de la base de datos sin filtros */
   app.get("/getPeliculas", function(req,res, next){
-    Pelicula.find({}).populate("actor").populate("director")
+    Pelicula.find({})
     .exec(function(err, pelicula){
       if(err){
         res.send(err);
