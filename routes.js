@@ -16,8 +16,8 @@ module.exports = function(app,  mongoose, cors){
       descripcion: req.body.descripcion,
       year: req.body.year,
       genero: req.body.genero,
-      director: mongoose.Types.ObjectId(req.body.director), //Casteamos el string para convertirlo a un ObjectId
-      actor: mongoose.Types.ObjectId(req.body.actor)
+      director: req.body.director, //Casteamos el string para convertirlo a un ObjectId
+      actor: req.body.actor
     });
 
    //pelicula.actores.push.apply(pelicula.actores, req.body.actores); //Añade actores a la pelicula
@@ -52,7 +52,7 @@ module.exports = function(app,  mongoose, cors){
       if (err){
         res.send(err);
       }else{
-        console.log("NOMBRE", req.body.nombre); 
+        console.log("NOMBRE", req.body.nombre);
         pelicula.nombre = req.body.nombre;
         pelicula.descripcion = req.body.descripcion;
         pelicula.year = req.body.year;
