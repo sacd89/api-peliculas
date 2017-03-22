@@ -9,8 +9,10 @@ var peliculaSchema = new Schema({
   descripcion:{type:String, required:true},
   year:{type:Number, required:true},
   genero:{type:String, required:true},
-  director:{type:Schema.ObjectId, ref:"Director"},
-  actor:{type: Schema.ObjectId, ref:"Actor"}
+  director: {type:String, required:true},
+  actor: {type:String, required:true}
+  // director:{type:Schema.ObjectId, ref:"Director"},
+  // actor:{type: Schema.ObjectId, ref:"Actor"}
 });
 
 var Pelicula = mongoose.model("Pelicula", peliculaSchema);
