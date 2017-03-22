@@ -56,8 +56,8 @@ module.exports = function(app,  mongoose, cors){
         pelicula.descripcion = req.body.descripcion;
         pelicula.year = req.body.year;
         pelicula.genero = req.body.genero;
-        pelicula.director = mongoose.Types.ObjectId(req.body.director);
-        pelicula.actor = mongoose.Types.ObjectId(req.body.actor);
+        pelicula.director = req.body.director;
+        pelicula.actor = req.body.actor;
       }
 
       // Guardamos la pelicula
