@@ -1,9 +1,9 @@
-var express = require('express'); //Sirve para utilizar una dependecia
+var express = require('express'); //Cargamos el paquete express
 var app = express();
-var bodyParser = require('body-parser'); //Sirve para sacar datos del body del html
+var bodyParser = require('body-parser');
 var cors = require('cors'); //Sirve para conectar el api con la app
 var port = process.env.PORT || 5000; //Puerto
-var mongoose = require('mongoose'); //Sirve para utilizar mongoDB
+var mongoose = require('mongoose'); //Cargamos el paqueter mongoose
 
 var configDB = require('./config/database.js'); //Sirve para traerse la configuración de la base de datos
 mongoose.connect(configDB.url); //Se conecta a la base de datos

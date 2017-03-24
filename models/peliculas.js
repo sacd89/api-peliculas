@@ -1,4 +1,4 @@
-var mongoose = require("mongoose"); //Para utilizar mongoose
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var Director = mongoose.model('Director');
 var Actor = mongoose.model('Actor');
@@ -11,8 +11,6 @@ var peliculaSchema = new Schema({
   genero:{type:String, required:true},
   director: {type:String, required:true},
   actor: {type:String, required:true}
-  // director:{type:Schema.ObjectId, ref:"Director"},
-  // actor:{type: Schema.ObjectId, ref:"Actor"}
 });
 
 var Pelicula = mongoose.model("Pelicula", peliculaSchema);

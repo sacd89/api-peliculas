@@ -16,11 +16,9 @@ module.exports = function(app,  mongoose, cors){
       descripcion: req.body.descripcion,
       year: req.body.year,
       genero: req.body.genero,
-      director: req.body.director, //Casteamos el string para convertirlo a un ObjectId
+      director: req.body.director,
       actor: req.body.actor
     });
-
-   //pelicula.actores.push.apply(pelicula.actores, req.body.actores); //Añade actores a la pelicula
 
    //Guardamos la pelicula en la base de datos
     pelicula.save(function(err, obj){
